@@ -10,7 +10,7 @@ services:
       - db_value:/var/lib/postgresql/data/
 
     env_file:
-      - /Users/madina/Dev/infra_sp2/api_yamdb/.env
+      - /Users/madina/Dev/infra_sp2/infra/.env
   web:
     build: ../api_yamdb
     restart: always
@@ -21,7 +21,7 @@ services:
     depends_on:
       - db
     env_file:
-      - /Users/madina/Dev/infra_sp2/api_yamdb/.env
+      - /Users/madina/Dev/infra_sp2/infra/.env
 
   nginx:
     image: nginx:1.21.3-alpine
