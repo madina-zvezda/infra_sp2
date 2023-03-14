@@ -12,9 +12,9 @@ from rest_framework_simplejwt.views import TokenViewBase
 
 from api.filters import TitleFilter
 from api.mixins import CreateListDestroyViewSet
-from api.permissions import IsAdminOrReadOnly, IsOwnerOrStaffOrReadOnly, IsAdmin
-from reviews.models import Genre, Category, Title, Review
-from .serializers import (
+from api.permissions import IsAdmin
+from api.permissions import IsAdminOrReadOnly, IsOwnerOrStaffOrReadOnly
+from api.serializers import (
     GenreSerializer,
     CommentSerializer,
     CategorySerializer,
@@ -25,7 +25,8 @@ from .serializers import (
     TokenObtainSerializer,
     UserSerializer,
 )
-from .utils import send_email
+from api.utils import send_email
+from reviews.models import Genre, Review, Category, Title
 
 User = get_user_model()
 

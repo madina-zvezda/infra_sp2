@@ -4,9 +4,9 @@ from django.db import models
 from django.utils.crypto import get_random_string
 from django.utils.translation import gettext_lazy as _
 
+from api.utils import send_email
 from .constants import USER, ADMIN, MODERATOR, PASSWORD_LENGTH
 from .validators import validate_me
-from ..api.utils import send_email
 
 
 class YamdbUserManager(UserManager):
