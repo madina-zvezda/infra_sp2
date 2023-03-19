@@ -41,10 +41,15 @@ pip3 install -r requirements.txt
 ```
 docker-compose up -d --build
 ```
+Выполнить миграции: 
+```
+docker-compose exec web python manage.py migrate 
+```
 Создать суперпользователя
 ```
 docker-compose exec web python manage.py createsuperuser
 ```
+
 Собрать статику
 ```
 docker-compose exec web python manage.py collectstatic --no-input
