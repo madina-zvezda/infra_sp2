@@ -75,3 +75,6 @@ DB_PORT=5432
 ```
 
 Документация API: http://localhost/redoc/
+
+## Автор
+* **Муминова Мадина** - https://github.com/muminova-madina
